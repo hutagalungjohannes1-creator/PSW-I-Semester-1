@@ -1,0 +1,43 @@
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem; 
+    list-style: none;
+    padding: 0;
+
+}
+           input,
+           select,
+           textarea {
+               max-width: 100%;
+           }
+  
+.catalog {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+    .catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: var(--space-2, 1rem);
+    border: 1px solid #1e6fe0;
+    max-width: 100%;
+}
+
+.card h2,
+.card p {
+    margin: 0;
+}
+
+.card a {
+    align-self: start;
+}

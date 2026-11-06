@@ -1,0 +1,89 @@
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.catalog {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    container-type: inline-size;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    padding: 1.25rem;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card h2,
+.card p {
+    margin: 0;
+}
+
+.card a {
+    align-self: start;
+    color: #ffffff;
+    background-color: #f59e0b;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-image: url("gambar/Madrid.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+}
+
+nav a,
+.nav-list a {
+    color: #facc15;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card h2 {
+    color: #0f172a;
+}
+
+.card p {
+    color: #334155;
+}
+
+@container (min-width: 30rem) {
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        transition: none;
+    }
+}

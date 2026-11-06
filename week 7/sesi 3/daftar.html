@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulir pendaftaran kegiatan Komunitas Web Mahasiswa.">
+    <title>Pendaftaran | Komunitas Web Mahasiswa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Komunitas Web Mahasiswa</h1>
+        <p>Formulir Pendaftaran Kegiatan.</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+        <ul class="nav-list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+            <li><a href="daftar.html" aria-current="page">Pendaftaran</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulir Pendaftaran</h2>
+            <form class="registration-form" action="#" method="get">
+
+                <!-- Kode Peserta -->
+                <label for="kode">Kode peserta (6 angka, wajib)</label>
+                <p class="form-hint">Contoh: 001234. Gunakan tepat enam angka.</p>
+                <input type="text" id="kode" name="kode" required pattern="[0-9]{6}" placeholder="001234">
+
+                <!-- Nama Lengkap -->
+                <label for="nama">Nama lengkap (wajib)</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+
+                <!-- Email -->
+                <label for="email">Email (wajib)</label>
+                <input type="email" id="email" name="email" required placeholder="email@student.del.ac.id">
+
+                <!-- Nomor Telepon -->
+                <label for="telepon">Nomor Telepon</label>
+                <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx">
+
+                <!-- Jumlah Tiket -->
+                <label for="tiket">Jumlah tiket (1-5, wajib)</label>
+                <input type="number" id="tiket" name="tiket" min="1" max="5" value="1" required>
+
+                <!-- Program Studi -->
+                <label for="prodi">Program studi (wajib)</label>
+                <select id="prodi" name="prodi" required>
+                    <option value="" disabled selected>Pilih program studi</option>
+                    <option value="trpl">D4 Teknologi Rekayasa Perangkat Lunak</option>
+                    <option value="ti">S1 Informatika</option>
+                    <option value="si">S1 Sistem Informasi</option>
+                </select>
+
+                <!-- Mode Kehadiran (Radio Button) -->
+                <fieldset class="radio-group">
+                    <legend>Mode kehadiran (wajib)</legend>
+                    <label><input type="radio" name="kehadiran" value="luring" required> Luring</label>
+                    <label><input type="radio" name="kehadiran" value="daring"> Daring</label>
+                </fieldset>
+
+                <!-- Minat Topik (Checkbox) -->
+                <fieldset class="checkbox-group">
+                    <legend>Minat Topik</legend>
+                    <label><input type="checkbox" name="topik" value="html"> HTML</label>
+                    <label><input type="checkbox" name="topik" value="aksesibilitas"> Aksesibilitas</label>
+                </fieldset>
+
+                <!-- Catatan -->
+                <label for="catatan">Catatan (opsional)</label>
+                <textarea id="catatan" name="catatan" rows="4" placeholder="Tambahkan catatan jika ada..."></textarea>
+
+                <!-- Tombol Submit -->
+                <button type="submit">Daftar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Kontak: kegiatan@example.com</p>
+    </footer>
+</body>
+
+</html>
